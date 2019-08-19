@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitch Music", "Twitch Music\Twitch Music.csproj", "{26C7DF7C-1743-47DE-B1B3-E09BB7AA8875}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26C7DF7C-1743-47DE-B1B3-E09BB7AA8875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C7DF7C-1743-47DE-B1B3-E09BB7AA8875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C7DF7C-1743-47DE-B1B3-E09BB7AA8875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C7DF7C-1743-47DE-B1B3-E09BB7AA8875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1AC88CD-5353-4C8A-AE0D-93151C0FFD79}
+	EndGlobalSection
+EndGlobal

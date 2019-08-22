@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Twitch_Music.Bot;
+using Twitch_Music.Library;
 
 namespace Twitch_Music
 {
@@ -20,7 +20,7 @@ namespace Twitch_Music
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            TwitchBotManager bot = new TwitchBotManager("123", "123", listView2);
+            TwitchBotManager bot = new TwitchBotManager("aoikazto", listView2);
             
         }
     }

@@ -31,109 +31,134 @@
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("asdf");
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("d");
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("asdf");
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Text_Channel = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.listMusicLink = new System.Windows.Forms.ListView();
+            this.listMusicTitle = new System.Windows.Forms.ListView();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Text_Command = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Text_Channel
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 21);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(12, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 21);
-            this.textBox2.TabIndex = 1;
+            this.Text_Channel.Location = new System.Drawing.Point(47, 14);
+            this.Text_Channel.Name = "Text_Channel";
+            this.Text_Channel.Size = new System.Drawing.Size(277, 21);
+            this.Text_Channel.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(295, 10);
+            this.button1.Location = new System.Drawing.Point(330, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 65);
+            this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // listView1
+            // listMusicLink
             // 
-            this.listView1.Location = new System.Drawing.Point(52, 133);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(99, 305);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView2
-            // 
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.listMusicLink.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
             listViewItem3});
-            this.listView2.Location = new System.Drawing.Point(170, 133);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(691, 305);
-            this.listView2.TabIndex = 4;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.List;
+            this.listMusicLink.Location = new System.Drawing.Point(14, 91);
+            this.listMusicLink.Name = "listMusicLink";
+            this.listMusicLink.Size = new System.Drawing.Size(691, 305);
+            this.listMusicLink.TabIndex = 4;
+            this.listMusicLink.UseCompatibleStateImageBehavior = false;
+            this.listMusicLink.View = System.Windows.Forms.View.List;
             // 
-            // listView3
+            // listMusicTitle
             // 
-            this.listView3.Location = new System.Drawing.Point(910, 133);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(175, 305);
-            this.listView3.TabIndex = 5;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listMusicTitle.Location = new System.Drawing.Point(726, 91);
+            this.listMusicTitle.Name = "listMusicTitle";
+            this.listMusicTitle.Size = new System.Drawing.Size(175, 305);
+            this.listMusicTitle.TabIndex = 5;
+            this.listMusicTitle.UseCompatibleStateImageBehavior = false;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(613, 52);
+            this.button4.Location = new System.Drawing.Point(823, 62);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(81, 23);
             this.button4.TabIndex = 8;
             this.button4.Text = "Del";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // Text_Command
             // 
-            this.textBox3.Location = new System.Drawing.Point(43, 91);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 21);
-            this.textBox3.TabIndex = 9;
+            this.Text_Command.Location = new System.Drawing.Point(87, 47);
+            this.Text_Command.Name = "Text_Command";
+            this.Text_Command.Size = new System.Drawing.Size(238, 21);
+            this.Text_Command.TabIndex = 9;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(256, 89);
+            this.button2.Location = new System.Drawing.Point(331, 47);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 23);
+            this.button2.Size = new System.Drawing.Size(112, 23);
             this.button2.TabIndex = 10;
             this.button2.Text = "Run";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "채널";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(727, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 12);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "노래 큐";
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(488, 14);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(63, 51);
+            this.webBrowser1.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 12);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "테스트 명령";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 450);
+            this.ClientSize = new System.Drawing.Size(1116, 422);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Text_Command);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.listView3);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listMusicTitle);
+            this.Controls.Add(this.listMusicLink);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Text_Channel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -143,15 +168,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Text_Channel;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView listMusicLink;
+        private System.Windows.Forms.ListView listMusicTitle;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Text_Command;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

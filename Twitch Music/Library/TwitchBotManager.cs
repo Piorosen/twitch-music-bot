@@ -38,7 +38,8 @@ namespace Twitch_Music.Library
         {
             list.Invoke(new MethodInvoker(() =>
             {
-                list.Items.Add("OnMessageReceived : " + e.ChatMessage.Message);
+
+                list.Items.Add(e.ChatMessage.Message);
                 
             }));
         }

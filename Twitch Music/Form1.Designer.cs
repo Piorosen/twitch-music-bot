@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("asdf");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("d");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("asdf");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("asdf");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("d");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("asdf");
             this.Text_Channel = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listMusicLink = new System.Windows.Forms.ListView();
@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Text_Channel
@@ -64,9 +65,9 @@
             // listMusicLink
             // 
             this.listMusicLink.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.listMusicLink.Location = new System.Drawing.Point(14, 91);
             this.listMusicLink.Name = "listMusicLink";
             this.listMusicLink.Size = new System.Drawing.Size(691, 305);
@@ -90,6 +91,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Del";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // Text_Command
             // 
@@ -128,7 +130,7 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(488, 14);
+            this.webBrowser1.Location = new System.Drawing.Point(957, 345);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(63, 51);
@@ -143,11 +145,22 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "테스트 명령";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(729, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(118, 44);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Stop";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 422);
+            this.ClientSize = new System.Drawing.Size(1098, 422);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.label2);
@@ -179,6 +192,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
     }
 }
 

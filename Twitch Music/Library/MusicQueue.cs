@@ -18,7 +18,7 @@ namespace Twitch_Music.Library
     }
     public class MusicQueue
     {
-        public Queue<YoutubeMusic> musicQueue = new Queue<YoutubeMusic>();
+        Queue<YoutubeMusic> musicQueue = new Queue<YoutubeMusic>();
 
         public MusicQueue()
         {
@@ -88,6 +88,15 @@ namespace Twitch_Music.Library
             }
             
         }
+
+        public void Delete()
+        {
+            musicQueue.Dequeue();
+        }
+
+        public int Count => musicQueue.Count;
+
+        public YoutubeMusic[] List => musicQueue.ToArray();
 
     }
 }

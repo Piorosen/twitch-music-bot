@@ -20,21 +20,48 @@ namespace Twitch_Music
         public Form1()
         {
             InitializeComponent();
+            
+        }
+
+        TwitchBotManager bot;
+
+        private void Bot_NextMusicQueue(object sender, YoutubeMusic e)
+        {
+            webBrowser1.Navigate(e.Link);
+        }
+
+        private void Bot_ChangedMusicQueue(object sender, MusicQueue e)
+        {
+            listMusicLink.Clear();
+            listMusicTitle.Clear();
+
+            foreach (var p in e.List)
+            {
+                listMusicLink.Items.Add(p.Link);
+                listMusicTitle.Items.Add(p.Title);
+            }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            bot.TestCommand(Text_Command.Text);
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("https://www.google.com");
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            TwitchBotManager bot = new TwitchBotManager("aoikazto", listMusicLink);
-            
+            bot = new TwitchBotManager(Text_Channel.Text);
+            bot.ChangedMusicQueue += Bot_ChangedMusicQueue;
+            bot.NextMusicQueue += Bot_NextMusicQueue;
         }
 
-
-
-        private void Button2_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
-
-
-
+            bot.Delete();
         }
     }
 }

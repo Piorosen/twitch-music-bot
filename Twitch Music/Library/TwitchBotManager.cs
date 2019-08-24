@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,8 @@ namespace Twitch_Music.Library
         TwitchClient client;
         MusicQueue MusicQueue = new MusicQueue();
 
-        event EventHandler<MusicQueue> ChangedMusicQueue;
-        event EventHandler<YoutubeMusic> NextMusicQueue;
+        public event EventHandler<MusicQueue> ChangedMusicQueue;
+        public event EventHandler<YoutubeMusic> NextMusicQueue;
 
         public TwitchBotManager(string channel)
         {
@@ -34,6 +35,21 @@ namespace Twitch_Music.Library
             client.Connect();
             
         }
+
+        public void TestCommand(string command)
+        {
+            Client_OnMessageReceived(this, new TwitchLib.Client.Events.OnMessageReceivedArgs()
+            {
+                ChatMessage = new ChatMessage("", "", "", "", "", Color.White, new EmoteSet("", ""), command, TwitchLib.Client.Enums.UserType.Admin, "", "", false, 0, "", false, false, false, false, TwitchLib.Client.Enums.Noisy.False, "", "", new List<KeyValuePair<string, string>>(), new CheerBadge(0), 0, 0)
+
+            });
+        }
+
+        public void Delete()
+        {
+            MusicQueue.Delete();
+        }
+
         private void Client_OnMessageReceived(object sender, TwitchLib.Client.Events.OnMessageReceivedArgs e)
         {
             var message = e.ChatMessage.Message;
@@ -47,13 +63,10 @@ namespace Twitch_Music.Library
                 }
                 else if (message.Contains("다음"))
                 {
-                    
                     NextMusicQueue?.Invoke(this, MusicQueue.Next());
                 }
-
             }
-
-
         }
+
     }
 }

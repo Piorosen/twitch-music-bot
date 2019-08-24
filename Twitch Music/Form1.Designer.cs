@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("asdf");
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("d");
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("asdf");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("asdf");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("d");
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("asdf");
             this.Text_Channel = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listMusicLink = new System.Windows.Forms.ListView();
@@ -65,9 +65,9 @@
             // listMusicLink
             // 
             this.listMusicLink.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem13,
+            listViewItem14,
+            listViewItem15});
             this.listMusicLink.Location = new System.Drawing.Point(14, 91);
             this.listMusicLink.Name = "listMusicLink";
             this.listMusicLink.Size = new System.Drawing.Size(691, 305);
@@ -82,6 +82,7 @@
             this.listMusicTitle.Size = new System.Drawing.Size(175, 305);
             this.listMusicTitle.TabIndex = 5;
             this.listMusicTitle.UseCompatibleStateImageBehavior = false;
+            this.listMusicTitle.View = System.Windows.Forms.View.List;
             // 
             // button4
             // 

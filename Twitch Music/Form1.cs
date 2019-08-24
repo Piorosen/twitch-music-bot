@@ -27,19 +27,25 @@ namespace Twitch_Music
 
         private void Bot_NextMusicQueue(object sender, YoutubeMusic e)
         {
-            webBrowser1.Navigate(e.Link);
+            this.Invoke(new MethodInvoker(() =>
+            {
+                webBrowser1.Navigate(e.Link);
+            }));
         }
 
         private void Bot_ChangedMusicQueue(object sender, MusicQueue e)
         {
-            listMusicLink.Clear();
-            listMusicTitle.Clear();
-
-            foreach (var p in e.List)
+            this.Invoke(new MethodInvoker(() =>
             {
-                listMusicLink.Items.Add(p.Link);
-                listMusicTitle.Items.Add(p.Title);
-            }
+                listMusicLink.Clear();
+                listMusicTitle.Clear();
+
+                foreach (var p in e.List)
+                {
+                    listMusicLink.Items.Add(p.Link);
+                    listMusicTitle.Items.Add(p.Title);
+                }
+            }));
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -55,13 +61,29 @@ namespace Twitch_Music
         private void Button1_Click(object sender, EventArgs e)
         {
             bot = new TwitchBotManager(Text_Channel.Text);
+
             bot.ChangedMusicQueue += Bot_ChangedMusicQueue;
             bot.NextMusicQueue += Bot_NextMusicQueue;
+            bot.StopMusicQueue += Bot_StopMusicQueue;
+        }
+
+        private void Bot_StopMusicQueue(object sender, EventArgs e)
+        {
+            Button3_Click(sender, e);
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            bot.Delete();
+            webBrowser1.Navigate("https://www.google.com");
+            try
+            {
+                bot.Delete();
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

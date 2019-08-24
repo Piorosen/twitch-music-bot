@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -23,7 +24,9 @@ namespace Twitch_Music.Library
         {
 
             var p = GetTitle("prMk6Znm4Bc");
+            var e = GetDuration("prMk6Znm4Bc");
         }
+
         string GetTitle(string Link)
         {
             WebClient client = new WebClient();
@@ -58,16 +61,35 @@ namespace Twitch_Music.Library
                 }
             }
 
-            metas = doc.DocumentNode.SelectNodes()
-
-
             return result;
+        }
+
+        int GetDuration(string Link)
+        {
+            return 100;
         }
 
         public void Add(string Link)
         {
+            musicQueue.Enqueue(new YoutubeMusic
+            {
+                Title = GetTitle(Link),
+                Link = Link,
+                Length = GetDuration(Link)
+            });
+        }
 
-
+        public YoutubeMusic Next()
+        {
+            if (musicQueue.Count != 0)
+            {
+                return musicQueue.Dequeue();
+            }
+            else
+            {
+                return new YoutubeMusic();
+            }
+            
         }
 
     }

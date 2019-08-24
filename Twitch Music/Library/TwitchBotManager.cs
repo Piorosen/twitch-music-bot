@@ -36,12 +36,6 @@ namespace Twitch_Music.Library
         }
         private void Client_OnMessageReceived(object sender, TwitchLib.Client.Events.OnMessageReceivedArgs e)
         {
-            list.Invoke(new MethodInvoker(() =>
-            {
-
-
-                
-            }));
         }
     }
 }

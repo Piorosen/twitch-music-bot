@@ -39,7 +39,7 @@ namespace Twitch_Music.Library
             list.Invoke(new MethodInvoker(() =>
             {
 
-                list.Items.Add(e.ChatMessage.Message);
+
                 
             }));
         }

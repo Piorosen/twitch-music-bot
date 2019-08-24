@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("asdf");
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("d");
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("asdf");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("asdf");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("d");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("asdf");
             this.Text_Channel = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listMusicLink = new System.Windows.Forms.ListView();
@@ -65,21 +65,21 @@
             // listMusicLink
             // 
             this.listMusicLink.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.listMusicLink.Location = new System.Drawing.Point(14, 91);
             this.listMusicLink.Name = "listMusicLink";
-            this.listMusicLink.Size = new System.Drawing.Size(691, 305);
+            this.listMusicLink.Size = new System.Drawing.Size(429, 207);
             this.listMusicLink.TabIndex = 4;
             this.listMusicLink.UseCompatibleStateImageBehavior = false;
             this.listMusicLink.View = System.Windows.Forms.View.List;
             // 
             // listMusicTitle
             // 
-            this.listMusicTitle.Location = new System.Drawing.Point(726, 91);
+            this.listMusicTitle.Location = new System.Drawing.Point(466, 91);
             this.listMusicTitle.Name = "listMusicTitle";
-            this.listMusicTitle.Size = new System.Drawing.Size(175, 305);
+            this.listMusicTitle.Size = new System.Drawing.Size(438, 207);
             this.listMusicTitle.TabIndex = 5;
             this.listMusicTitle.UseCompatibleStateImageBehavior = false;
             this.listMusicTitle.View = System.Windows.Forms.View.List;
@@ -131,10 +131,10 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(957, 345);
+            this.webBrowser1.Location = new System.Drawing.Point(14, 316);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(63, 51);
+            this.webBrowser1.Size = new System.Drawing.Size(890, 372);
             this.webBrowser1.TabIndex = 13;
             // 
             // label3
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 422);
+            this.ClientSize = new System.Drawing.Size(920, 700);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.webBrowser1);

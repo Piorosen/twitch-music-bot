@@ -22,9 +22,6 @@ namespace Twitch_Music.Library
 
         public MusicQueue()
         {
-
-            var p = GetTitle("prMk6Znm4Bc");
-            var e = GetDuration("prMk6Znm4Bc");
         }
 
         string GetTitle(string Link)
@@ -32,7 +29,7 @@ namespace Twitch_Music.Library
             WebClient client = new WebClient();
             client.Encoding = Encoding.UTF8;
 
-            var p = client.DownloadString($"https://www.youtube.com/watch?v={Link}");
+            var p = client.DownloadString($"{Link}");
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(p);
 
@@ -66,7 +63,7 @@ namespace Twitch_Music.Library
 
         int GetDuration(string Link)
         {
-            return 100;
+            return 240;
         }
 
         public void Add(string Link)

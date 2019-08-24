@@ -32,7 +32,8 @@ namespace Twitch_Music
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            MusicQueue a = new MusicQueue();
+
+
 
         }
     }
